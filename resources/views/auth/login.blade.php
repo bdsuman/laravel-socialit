@@ -13,9 +13,9 @@
 
                         <div class="row form-group">
                             <div class="col-md-6 offset-md-3" >
-                                    <a href="#" class="btn btn-danger btn-block mt-2">Login With Google</a>
-                                    <a href="#" class="btn btn-primary btn-block mt-2">Login With Facebook</a>
-                                    <a href="#" class="btn btn-dark btn-block mt-2">Login With Github</a>
+                                    <a href="{{ route('login.google') }}" class="btn btn-danger btn-block">Login with Google</a>
+                                    <a href="{{ route('login.facebook') }}" class="btn btn-primary btn-block">Login with Facebook</a>
+                                    <a href="{{ route('login.github') }}" class="btn btn-dark btn-block">Login with Github</a>
                                     <a href="#" class="btn btn-warning btn-block mt-2">Login With Gitlab</a>
                             </div>
                         </div>
