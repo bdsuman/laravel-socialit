@@ -11,11 +11,18 @@
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
+                        <div class="row form-group">
+                            <div class="col-md-6 offset-md-3" >
+                                    <a href="#" class="btn btn-danger btn-block mt-2">Login With Google</a>
+                                    <a href="#" class="btn btn-primary btn-block mt-2">Login With Facebook</a>
+                                    <a href="#" class="btn btn-dark btn-block mt-2">Login With Github</a>
+                                    <a href="#" class="btn btn-warning btn-block mt-2">Login With Gitlab</a>
+                            </div>
+                        </div>
+                        <p style="text-align: center;">OR</p>
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div class="col-md-6 offset-md-3">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="{{ __('Email Address') }}" autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +33,8 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="col-md-6 offset-md-3">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Password') }}" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
